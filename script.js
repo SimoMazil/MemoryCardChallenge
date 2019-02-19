@@ -1,18 +1,17 @@
-const allCards = document.querySelectorAll('.card')
-
-allCards.forEach((card) => {
-  return card.addEventListener('click', flipCard)
-})
-
 let cardFlipped, visibleCards = false
 let firstCard, secondCard;
 let score = 0
+
+const allCards = document.querySelectorAll('.card')
+console.log('allCards :', allCards);
+allCards.forEach(card => card.addEventListener('click', flipCard))
 
 function flipCard() {
   if(visibleCards) {
     return;
   }
-  
+  console.log(this);
+
   this.classList.add('flip')
 
   if(!cardFlipped) {
@@ -28,8 +27,8 @@ function flipCard() {
 
 function checkCards() {
   if(firstCard.dataset.card === secondCard.dataset.card) {
-    // firstCard.removeEventListner('click', flipCard)
-    // secondCard.removeEventListner('click', flipCard)
+    firstCard.removeEventListener('click', flipCard)
+    secondCard.removeEventListener('click', flipCard)
     score = score + 1
     setScore()
   } else {
