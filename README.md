@@ -9,7 +9,7 @@ A simple memory card game using Cat Ninja pictures
 ## Feature
 
 * It has Ninja cat picture
-* It a score points
+* It has a score points
 
 ## Usage
 
