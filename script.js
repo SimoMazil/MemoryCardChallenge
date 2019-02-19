@@ -1,9 +1,16 @@
 let cardFlipped = false
 let visibleCards = false
+let isMatch = false
 let firstCard, secondCard;
+let score = 0
 
 const allCards = document.querySelectorAll('.card')
 allCards.forEach(card => card.addEventListener('click', flipCard))
+
+const resetButton = document.getElementById('reset')
+resetButton.addEventListener('click', resetCards)
+
+const scoreElement = document.getElementById('points')
 
 function flipCard() {
   if(visibleCards) return;
@@ -22,13 +29,14 @@ function flipCard() {
 }
 
 function checkCards() {
-  const isMatch = firstCard.dataset.card === secondCard.dataset.card
+  isMatch = firstCard.dataset.card === secondCard.dataset.card
   isMatch ? matchCards() : flipOver()
 }
 
 function matchCards() {
   firstCard.removeEventListener('click', flipCard)
   secondCard.removeEventListener('click', flipCard)
+  setScore()
 }
 
 function flipOver() {
@@ -37,11 +45,24 @@ function flipOver() {
     firstCard.classList.remove('flip')
     secondCard.classList.remove('flip')
     visibleCards = false
+    setScore()
   }, 800)
 }
 
-const resetButton = document.getElementById('reset')
-resetButton.addEventListener('click', resetCards)
+function setScore() {
+  isMatch ? increase() : decrease()
+  scoreElement.innerHTML = score
+}
+
+function increase() {
+  score += 1
+}
+
+function decrease() {
+  if(score > 0) {
+    score -= 1
+  }
+}
 
 function resetCards() {
   allCards.forEach(card => card.classList.remove('flip'))
