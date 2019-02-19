@@ -3,8 +3,10 @@ A simple memory card game using Cat Ninja pictures
 
 ## Feature
 
-* It has Ninja cat picture
-* It has a score points
+* **Ninja Cat pictures**
+* **Score points**
+* **Shuffle feature**
+* **Rhuffle feature**
 
 ## Usage
 
