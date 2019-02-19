@@ -3,14 +3,12 @@ let firstCard, secondCard;
 let score = 0
 
 const allCards = document.querySelectorAll('.card')
-console.log('allCards :', allCards);
 allCards.forEach(card => card.addEventListener('click', flipCard))
 
 function flipCard() {
   if(visibleCards) {
     return;
   }
-  console.log(this);
 
   this.classList.add('flip')
 

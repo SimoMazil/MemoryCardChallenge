@@ -2,78 +2,85 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Memory Game</title>
+    <title>Memory Card Game</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-    <section id="score-container">
-      <p>Score: <span id="score">0</span> points</p>
+    <header>
+      <h1>Memory Card Game Challenge</h1>
+    </header>
+    <section id="memory-game-container">
+      <div class="card" data-card="cat4">
+        <img class="front" src="./images/cat4.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat4">
+        <img class="front" src="./images/cat4.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat1">
+        <img class="front" src="./images/cat1.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat1">
+        <img class="front" src="./images/cat1.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat2">
+        <img class="front" src="./images/cat2.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat2">
+        <img class="front" src="./images/cat2.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat5">
+        <img class="front" src="./images/cat5.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat5">
+        <img class="front" src="./images/cat5.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat3">
+        <img class="front" src="./images/cat3.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat3">
+        <img class="front" src="./images/cat3.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat6">
+        <img class="front" src="./images/cat6.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
+      
+      <div class="card" data-card="cat6">
+        <img class="front" src="./images/cat6.jpg" />
+        <img class="back" src="./images/back.jpg" />
+      </div>
     </section>
     
-    <section id="memory-game-container">
-      
-      <div class="card" data-card="cat4">
-        <img class="front" src="./images/cat4.jpg" />
-        <img class="back" src="./images/back.jpg" />
+    <section id="board">
+      <div class="score">
+        <p>Score: <span>0</span> points</p>
       </div>
       
-      <div class="card" data-card="cat1">
-        <img class="front" src="./images/cat1.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat2">
-        <img class="front" src="./images/cat2.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat1">
-        <img class="front" src="./images/cat1.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat2">
-        <img class="front" src="./images/cat2.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat5">
-        <img class="front" src="./images/cat5.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat3">
-        <img class="front" src="./images/cat3.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat4">
-        <img class="front" src="./images/cat4.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat6">
-        <img class="front" src="./images/cat6.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat3">
-        <img class="front" src="./images/cat3.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat5">
-        <img class="front" src="./images/cat5.jpg" />
-        <img class="back" src="./images/back.jpg" />
-      </div>
-      
-      <div class="card" data-card="cat6">
-        <img class="front" src="./images/cat6.jpg" />
-        <img class="back" src="./images/back.jpg" />
+      <div class="control">
+        <button id="reset">Reset</button>
+        <button id="shuffle">Shuffle</button>
       </div>
     </section>
-
     <script src="script.js"></script>
   </body>
 </html>
