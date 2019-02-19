@@ -7,6 +7,8 @@ let score = 0
 const allCards = document.querySelectorAll('.card')
 allCards.forEach(card => card.addEventListener('click', flipCard))
 
+shuffleCards()
+
 const resetButton = document.getElementById('reset')
 resetButton.addEventListener('click', resetCards)
 
@@ -69,6 +71,8 @@ function decrease() {
 
 function resetCards() {
   allCards.forEach(card => card.classList.remove('flip'))
+  isMatch = false
+  setScore()
 }
 
 function shuffleCards() {
