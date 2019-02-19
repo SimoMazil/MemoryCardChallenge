@@ -10,6 +10,9 @@ allCards.forEach(card => card.addEventListener('click', flipCard))
 const resetButton = document.getElementById('reset')
 resetButton.addEventListener('click', resetCards)
 
+const shuffleButton = document.getElementById('shuffle')
+shuffleButton.addEventListener('click', shuffleCards)
+
 const scoreElement = document.getElementById('points')
 
 function flipCard() {
@@ -66,4 +69,12 @@ function decrease() {
 
 function resetCards() {
   allCards.forEach(card => card.classList.remove('flip'))
+}
+
+function shuffleCards() {
+  const allCardsCount = allCards.length
+  allCards.forEach(card => {
+    let randomPositions = Math.floor(Math.random() * allCardsCount)
+    card.style.order = randomPositions
+  })
 }
