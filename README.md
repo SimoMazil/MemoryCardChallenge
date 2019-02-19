@@ -1,11 +1,6 @@
 # MemoryCardChallenge
 A simple memory card game using Cat Ninja pictures
 
-## Powered By
-
-* **CSS**
-* **JS**
-
 ## Feature
 
 * It has Ninja cat picture
