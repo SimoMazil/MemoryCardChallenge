@@ -72,6 +72,8 @@ function decrease() {
 function resetCards() {
   allCards.forEach(card => card.classList.remove('flip'))
   isMatch = false
+  cardFlipped = false
+  visibleCards = false
   setScore()
 }
 
