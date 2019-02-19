@@ -30,6 +30,7 @@ function checkCards() {
   if(firstCard.dataset.card === secondCard.dataset.card) {
     // firstCard.removeEventListner('click', flipCard)
     // secondCard.removeEventListner('click', flipCard)
+    score = score + 1
     setScore()
   } else {
     flipOver()
@@ -42,10 +43,11 @@ function flipOver() {
     firstCard.classList.remove('flip')
     secondCard.classList.remove('flip')
     visibleCards = false
+    score = score - 1
+    setScore()
   }, 800)
 }
 
 function setScore() {
-  score = score + 1
   document.getElementById("score").innerHTML = score;
 }
