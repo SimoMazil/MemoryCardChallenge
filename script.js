@@ -39,3 +39,10 @@ function flipOver() {
     visibleCards = false
   }, 800)
 }
+
+const resetButton = document.getElementById('reset')
+resetButton.addEventListener('click', resetCards)
+
+function resetCards() {
+  allCards.forEach(card => card.classList.remove('flip'))
+}
